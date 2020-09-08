@@ -1,15 +1,15 @@
 import React from 'react';
-
-function Potato() {
-  return <h1>I like potato</h1>;
-}
+import './App.css';
+import { HashRouter, Route } from 'react-router-dom'
+import About from './routes/About'
+import Home from './routes/Home'
 
 function App() {
   return (
-    <div>
-      <h1>Hello</h1>
-      <Potato />
-    </div>
+    <HashRouter>
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/about" compoennt={About} />
+    </HashRouter>
   )
 }
 
